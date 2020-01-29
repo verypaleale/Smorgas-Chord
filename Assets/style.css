@@ -1,6 +1,15 @@
+.navbar {
+    background-color
+}
+
+#image {
+    max-width: 200px;
+    max-height: 200px;
+}
+
 
 #main {
-    padding: 50px;
+    padding: 20px;
 }
 #slogan {
     padding: 20px;

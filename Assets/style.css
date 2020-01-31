@@ -1,4 +1,22 @@
+<<<<<<< HEAD
 .songsterButtons {
     background-color: aqua;
     border: 2px solid black;
+=======
+
+#image {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#main {
+    padding: 20px;
+}
+#slogan {
+    padding: 20px;
+    margin: 10px;
+}
+#history {
+
+>>>>>>> 2789e7c1647d482d1b36795f2a3cf79f78ec5d26
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var songArr = [];
 var songName;
 var buttonDIV;
@@ -113,3 +114,11 @@ function lyricsClick() {
         alert("This particular song doesn't have lyrics on file.");
     });
 }
+=======
+$(document).ready(function() {
+    $("button").click(function() {
+        console.log("click");
+        
+    })
+})
+>>>>>>> 2789e7c1647d482d1b36795f2a3cf79f78ec5d26

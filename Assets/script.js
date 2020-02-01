@@ -29,6 +29,7 @@ if (retrievedData !=null) {
 
 $("#search").click(function updateSongList() {
 
+    // automatically scroll down when click search
     $('html,body').animate({
         scrollTop: $(".second").offset().top},
         'slow');
@@ -51,8 +52,8 @@ $("#search").click(function updateSongList() {
         url: queryLyrics,
         method: "GET"
     }).then(function(response) {
-            var lyricsHeader = $("<h5>").text("Lyrics Options: ")
-            $("#songList").append(lyricsHeader);
+            // var lyricsHeader = $("<h5>").text("Lyrics Options: ")
+            // $("#songList").append(lyricsHeader);
 
             for (i = 0; i < response.length; i++) {
                 buttonDIV = $("<button>").attr("class", "happiButtons");
@@ -62,7 +63,7 @@ $("#search").click(function updateSongList() {
                 buttonDIV.val(lyrics);
                 $(buttonDIV).append(titleDiv);
                 $(buttonDIV).append(artistDiv);
-                $("#songList").append(buttonDIV);
+                $("#songButtons").append(buttonDIV);
                 // queryLyricsARR.push(lyrics);
                 // console.log("array: " + queryLyricsARR);
 
@@ -121,7 +122,7 @@ $("#search").click(function updateSongList() {
                     $(tabButtons).append(titleDiv);
                     $(tabButtons).append(artistDiv);
                     $(tabButtons).append(result);
-                    $(".showTabsDiv").append(tabButtons);
+                    $("#tabList").append(tabButtons);
                 }
             })
 

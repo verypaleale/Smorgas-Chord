@@ -27,7 +27,12 @@ if (retrievedData !=null) {
     }
 }
 
-$("#searchButton").click(function updateSongList() {
+$("#search").click(function updateSongList() {
+
+    $('html,body').animate({
+        scrollTop: $(".second").offset().top},
+        'slow');
+
     $(".showLyricsDiv").text = "";
 
     var currentSong = $("#input").val();

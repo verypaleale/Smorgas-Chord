@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("button").click(function() {
+    $("#search").click(function() {
         console.log("click");
         
     })

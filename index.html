@@ -1,81 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Added a link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type= "text/css" href="Assets/style.css">
-
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-
-    <title>Project 1</title>
-   
-
-</head>
-<body>
-    <header>Music Dashboard</header>
-
-    <main id="mainEl">
-        <div class="row">
-            <div class="col-4">
-                <h5>Search for a Song:</h5>
-                <input class="songInput"><button><i class="fas fa-search" id="search"></i></button>
-                <div class="row cityBreak">
-                    <div class="songList"></div>
-                </div>
-            </div>
-
-            <div class="col-8">
-                <div class="row musicInfoDiv">
-                    <!-- <h2 class="row cityInfoLines" id="cityndate"></h2>
-                    <div class="row cityInfoLines" id="temp">Temperature: </div>
-                    <div class="row cityInfoLines" id="humid">Humidity: </div>
-                    <div class="row cityInfoLines" id="wind">Wind Speed: </div>
-                    <div class="row cityInfoLines" id="uv">UV Index: </div> -->
-                </div>
-                <div class="row tabsInfoDIv"> </div> 
-                <div class="row showLyricsDiv"> </div> 
-
-            </div>
-        </div>
-
-    </main>
-
-
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="Assets/script.js"></script>
-</body>
-</html>
-
-<!-- 
-weather, forecast, uvi
-
-uv index - have to supply coordinates, which are supplied in the forecast api ("city": {"coord"})
-load forecast first, parse that object, and pass it into the uv api to get coordinates in order to show uv
-
-store searched cities into local storage as an array; grab last item from array (most recent item searched for) to show on reload
-
-Use the [OpenWeather API](https://openweathermap.org/api)
-    - http://api.openweathermap.org/data/2.5/weather
-    - http://api.openweathermap.org/data/2.5/forecast
-    - http://api.openweathermap.org/data/2.5/uvi
-    
--->
-=======
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -87,6 +12,17 @@ Use the [OpenWeather API](https://openweathermap.org/api)
 
 </head>
 <body>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  />
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
@@ -156,15 +92,73 @@ Use the [OpenWeather API](https://openweathermap.org/api)
                 <div class="inputField">
                     <p class="control has-icons-left">
                     <input id="input" class="input is-rounded is-large" type="text" placeholder="What song are we learning today...">
-                    <span class="icon is-small is-left">
-                    <i class="fas fa-search"></i>
-                  </span>
                 </div>
+                <span class="icon is-small is-left">
+                    <button id="searchButton"><i class="fas fa-search"></i></button>
+                </span>
+                <div id="searchedList">Previous Songs You Searched For:</div>
+                <div id="songList"></div>
+                <div class="row showLyricsDiv"> </div> 
+                <div class = "row showTabsDiv"></div>
+
+                
             </div>
         </div>
     </div>
 
-    
+    <script src="Assets/script.js"></script>
+
 </body>
 </html>
->>>>>>> 2789e7c1647d482d1b36795f2a3cf79f78ec5d26
+
+
+
+
+
+    <!-- <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <title>Project 1</title>
+   
+
+</head>
+<body>
+    <header>Music Dashboard</header>
+
+    <main id="mainEl">
+        <div class="row">
+            <div class="col-4">
+                <h5>Search for a Song:</h5>
+                <input class="songInput"><button><i class="fas fa-search" id="search"></i></button>
+                <div class="row cityBreak">
+                    <div class="songList"></div>
+                </div>
+            </div>
+
+            <div class="col-8">
+                <div class="row musicInfoDiv"></div>
+                <div class="row tabsInfoDIv"> </div> 
+                <div class="row showLyricsDiv"> </div> 
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="Assets/script.js"></script>
+</body>
+</html> -->

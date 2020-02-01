@@ -12,6 +12,17 @@
 
 </head>
 <body>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  />
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
@@ -94,10 +105,72 @@
 
 
                 </div>
+                <span class="icon is-small is-left">
+                    <button id="searchButton"><i class="fas fa-search"></i></button>
+                </span>
+                <div id="searchedList">Previous Songs You Searched For:</div>
+                <div id="songList"></div>
+                <div class="row showLyricsDiv"> </div> 
+                <div class = "row showTabsDiv"></div>
+
+                
             </div>
         </div>
     </div>
 
-    
+    <script src="Assets/script.js"></script>
+
 </body>
 </html>
+
+
+
+
+
+    <!-- <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <title>Project 1</title>
+   
+
+</head>
+<body>
+    <header>Music Dashboard</header>
+
+    <main id="mainEl">
+        <div class="row">
+            <div class="col-4">
+                <h5>Search for a Song:</h5>
+                <input class="songInput"><button><i class="fas fa-search" id="search"></i></button>
+                <div class="row cityBreak">
+                    <div class="songList"></div>
+                </div>
+            </div>
+
+            <div class="col-8">
+                <div class="row musicInfoDiv"></div>
+                <div class="row tabsInfoDIv"> </div> 
+                <div class="row showLyricsDiv"> </div> 
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="Assets/script.js"></script>
+</body>
+</html> -->

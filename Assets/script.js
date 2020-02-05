@@ -37,6 +37,8 @@ $("#search").click(function updateSongList() {
     var li = $("<li>");
     li.append(currentSong);
     ul.append(li);
+    $("#searchedList").append(ul);
+
 
     replaceSpace = currentSong.replace(/\s/g, "%20"); 
     queryLyrics = "https://api.happi.dev/v1/music?q=" + replaceSpace + "&limit=&apikey=05580c9wJXOa2YrFZUJlxtMDKREEexMldmTAHlmwb7Uk62acRmtbkJIv&type="
@@ -87,7 +89,7 @@ $("#search").click(function updateSongList() {
                     $("#tabList").append(tabButtons);
                 }
             })
-    $("#songButtons").prepend(ul);
+    // $("#songButtons").prepend(ul);
     localStorage.getItem("songArr", songArr);
 })
 

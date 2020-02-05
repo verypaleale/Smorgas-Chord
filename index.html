@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
 </head>
@@ -16,149 +17,148 @@
   <!-- Added link to the jQuery Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous"
-  />
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-          </a>
-      
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
-              Home
+    <div class="first">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
             </a>
-      
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                How are we rockin'?
+        
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+        
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-item">
+                Home
               </a>
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  About
+        
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  How are we rockin'?
                 </a>
-                <a class="navbar-item">
-                  Contact
-                </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item">
-                  Report an issue
-                </a>
+        
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">
+                    About
+                  </a>
+                  <a class="navbar-item">
+                    Contact
+                  </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item">
+                    Report an issue
+                  </a>
+                </div>
+              </div>
+            </div>
+        
+            <div class="navbar-end">
+              <div class="navbar-item">
+                  <button class="button is-medium">
+                      <span class="icon is-medium">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>GitHub</span>
+                    </button>
               </div>
             </div>
           </div>
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-                <button class="button is-medium">
-                    <span class="icon is-medium">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>GitHub</span>
-                  </button>
-            </div>
-          </div>
-        </div>
-    </nav>
+      </nav>
 
-<!-- Input Container-->
+  <!-- Input Container-->
 
-    <div id="main" class="container">
-        <div class="container is-centered">
-            <div class="box">
-                <div class="columns">
-                  <div class="column"></div>
-                  <div class="image is-flex is-horizontal-center has-text-centered" id="image">
-                    <img src="images/smorgas-chord.png"/>
+      <div id="main" class="container">
+          <div class="container is-centered">
+              <div class="box">
+                  <div class="columns">
+                    <div class="column"></div>
+                    <div class="image is-flex is-horizontal-center has-text-centered" id="image">
+                      <img src="images/smorgas-chord.png"/>
+                    </div>
+                    <div class="column"></div>
                   </div>
-                  <div class="column"></div>
+                  <div id="slogan" class="is-size-2 has-text-weight-light is-4">Music is great for the soul or whatever.</div>
+                  <div class="inputField">
+                      <p class="control has-icons-left has-icons-right">
+                      <input id="input" class="input is-rounded is-large" type="text" placeholder="What song are we learning today...">
+                      <span class="icon is-small is-left">
+                      <i class="fas fa-search"></i>
+                    </span>
+                    <div class="columns">
+                      <div class="column"></div>
+                      <div class="image is-flex is-horizontal-center has-text-centered">
+                        <button id="search" class="button is-success is-rounded is-large">Search!</button>
+                      </div>
+                      <div class="column"></div>
+                    </div>
+
+                  </div>
+
+                  
+              </div>
+          </div>
+      </div>
+    </div>
+    
+    <div class="second">
+      <div class="tile is-ancestor">
+        <div class="tile is-parent is-9">
+            <article id="lyricsField" class="tile is-child notification">
+                <p class="title">Lyric Options:</p>
+                <div id="songButtons" class="songButtons"></div>
+                <div id="myModal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Sorry, there are no lyrics on file for that option.</p>
+                  </div>
                 </div>
-                <div id="slogan has-text-centered" class="is-size-2 has-text-weight-light is-4">Music is great for the soul or whatever.</div>
-                <div class="inputField">
-                    <p class="control has-icons-left">
-                    <input id="input" class="input is-rounded is-large" type="text" placeholder="What song are we learning today...">
-                </div>
-                <span class="icon is-small is-left">
-                    <button id="searchButton"><i class="fas fa-search"></i></button>
-                </span>
+                <hr>
+                <div id="subtitle">Lyrics</div>
+                <div class="row showLyricsDiv"> </div> 
+            </article>
+            <article id="tabsField" class="tile is-child notification">
+                <p class="title">Chords go Here??</p>
+                <div id="tabList" class="tabList"></div>
+                
+
+            </article>
+        </div>
+        <div class="tile is-parent is-3">
+            <article id="historyField" class="tile is-child notification">
+            <div  class="content">
+                <p class="title">History</p>
                 <div id="searchedList">Previous Songs You Searched For:</div>
                 <div id="songList"></div>
-                <div class="row showLyricsDiv"> </div> 
-                <div class = "row showTabsDiv"></div>
-
                 
+                <div class = "row showTabsDiv"></div>
+                <!-- Songs -->
+                </div>
             </div>
+            </article>
         </div>
     </div>
+ <div class=" tile is-ancestor">
+     <div class="tile is-parent is-12">
+         <article class="tile is-child notification is-warning">
+             <div class="content">
+                <button class="YEEZY">
+                  Press me for a fire yeezy quote
+                </button>
+                <p class="yeezy-quote"></p>
+             </div>
+             
+         </article>
+     </div>
+ </div> 
 
     <script src="Assets/script.js"></script>
+    
+    
 
 </body>
 </html>
-
-
-
-
-
-    <!-- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-
-    <title>Project 1</title>
-   
-
-</head>
-<body>
-    <header>Music Dashboard</header>
-
-    <main id="mainEl">
-        <div class="row">
-            <div class="col-4">
-                <h5>Search for a Song:</h5>
-                <input class="songInput"><button><i class="fas fa-search" id="search"></i></button>
-                <div class="row cityBreak">
-                    <div class="songList"></div>
-                </div>
-            </div>
-
-            <div class="col-8">
-                <div class="row musicInfoDiv"></div>
-                <div class="row tabsInfoDIv"> </div> 
-                <div class="row showLyricsDiv"> </div> 
-
-            </div>
-        </div>
-
-    </main>
-
-
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="Assets/script.js"></script>
-</body>
-</html> -->

@@ -9,6 +9,8 @@ var queryLYR;
 var replaceSpace;
 var showLyrics1;
 
+
+
 // $(document).on("click", ".listnone", getLyrics);
 $(document).on("click", ".happiButtons", lyricsClick);
 
@@ -52,8 +54,7 @@ $("#search").click(function updateSongList() {
         url: queryLyrics,
         method: "GET"
     }).then(function(response) {
-            // var lyricsHeader = $("<h5>").text("Lyrics Options: ")
-            // $("#songList").append(lyricsHeader);
+
 
             for (i = 0; i < response.length; i++) {
                 buttonDIV = $("<button>").attr("class", "happiButtons");
@@ -229,3 +230,4 @@ function lyricsClick() {
 //         alert("This particular song doesn't have lyrics on file.");
 //     });
 // }
+

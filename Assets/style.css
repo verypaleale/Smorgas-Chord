@@ -9,7 +9,7 @@
 }
 #slogan {
     padding: 20px;
-    margin: 10px;
+    color: slategrey;
 }
 #search {
 
@@ -18,16 +18,55 @@
 .first {
     width: 100%;
     height: 650px;
-    background-color: steelblue;
-
+    background-color: #b5e9e9;
+    
 }
 
 .second {
     width: 100%;
     height: 600px;
 }
+#lyricsField {
+    background-color: #dcf3d0;
+    color: slategrey;
+}
+#tabsField {
+    background-color: #ffe1d0;
+    color: slategrey;
+}
 
+#historyField {
+    background-color: #fef6dd;
+    color: slategray;
+
+}
 .songsterButtons {
-    background-color: aqua;
-    border: 2px solid black;
+    background-color: transparent;
+    color: slategrey;
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+    border: 2px solid slategray;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 5px;
+
+}
+.happiButtons {
+    background-color: transparent;
+    color: rgb(144, 117, 112);
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+    border: 2px solid rgb(144, 117, 112);;
+    font-size: 14px;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin: 1px;
+
+}
+#subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
 }

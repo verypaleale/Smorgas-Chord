@@ -78,8 +78,13 @@
 
 #historyField {
     background-color: #fef6dd;
-    color: slategray;
+    color: slategrey;
 
+}
+
+#yeezyField {
+    background-color: #b19cd9;
+    color: slategrey
 }
 .songsterButtons {
     background-color: transparent;

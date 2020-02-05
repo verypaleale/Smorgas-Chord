@@ -1,3 +1,45 @@
+
+#image {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#main {
+    padding: 20px;
+}
+#slogan {
+    padding: 20px;
+    color: slategrey;
+}
+#search {
+
+    margin: 20px;
+}
+.first {
+    width: 100%;
+    height: 650px;
+    background-color: #b5e9e9;
+    
+}
+
+.second {
+    width: 100%;
+    height: 600px;
+}
+#lyricsField {
+    background-color: #dcf3d0;
+    color: slategrey;
+}
+#tabsField {
+    background-color: #ffe1d0;
+    color: slategrey;
+}
+
+#historyField {
+    background-color: #fef6dd;
+    color: slategray;
+
+}
 .songsterButtons {
     background-color: aqua;
     border: 2px solid black;

@@ -13,11 +13,18 @@
 
 </head>
 <body>
+  
 
   <!-- Added link to the jQuery Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <div class="first">
+      <div id="container">
+        <video  autoplay muted loop id="myVideo" onclick="myFunction()">
+         <source src="images/video.mp4" type="video/mp4" >
+       </video>
+ 
+
       <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
@@ -69,11 +76,16 @@
             </div>
           </div>
       </nav>
+      
+
 
   <!-- Input Container-->
 
       <div id="main" class="container">
-          <div class="container is-centered">
+
+        <div id="container">
+
+            
               <div class="box">
                   <div class="columns">
                     <div class="column"></div>
@@ -96,15 +108,18 @@
                       </div>
                       <div class="column"></div>
                     </div>
-
+                    
                   </div>
-
                   
               </div>
+              
           </div>
+
       </div>
-    </div>
-    
+
+      
+      </div>
+
     <div class="second">
       <div class="tile is-ancestor">
         <div class="tile is-parent is-9">
@@ -125,10 +140,10 @@
                 <p class="title">Chords go Here??</p>
                 <div id="tabList" class="tabList"></div>
                 
-
             </article>
         </div>
         <div class="tile is-parent is-3 is-vertical">
+          
             <article id="historyField" class="tile is-child notification">
               <div  class="content">
                 <p class="title">History</p>
@@ -137,20 +152,25 @@
                 
                 <div class = "row showTabsDiv"></div>
                 <!-- Songs -->
-                </div>
+                <div id="yeezyField"><p>" Yeezy Quote "</p></div>
               </div>
-            </article>
-            <article id="yeezyField" class="tile is-child box">
-              <div class="content">
-                <p class="title">Yeezy Quote Magic:</p>
-              </div>
-            </article>
           </div>
-
-      </footer>
     </div>
 
     <script src="Assets/script.js"></script>
+    <script>
+       var video = document.getElementById("myVideo")
+
+      function myFunction() { 
+        if (video.paused) {
+          video.play();
+  
+        } else {
+          video.pause();
+  
+    }
+}
+    </script>
     
 
 </body>

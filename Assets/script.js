@@ -30,14 +30,14 @@ if (retrievedData !=null) {
 
 function currentSongSearch() {
     currentSong = $("#input").val();
-        songArr.push(currentSong);
-        localStorage.setItem("songArr", JSON.stringify(songArr));
-        var ul = $("<ul>").attr("class", "listnone");
-        var li = $("<li>");
-        li.append(currentSong);
-        ul.append(li);
-        $("#searchedList").append(ul);
-        updateSongList(currentSong);
+    songArr.push(currentSong);
+    localStorage.setItem("songArr", JSON.stringify(songArr));
+    var ul = $("<ul>").attr("class", "listnone");
+    var li = $("<li>");
+    li.append(currentSong);
+    ul.append(li);
+    $("#searchedList").append(ul);
+    updateSongList(currentSong);
 } 
 function currentSongListnone() {
     currentSong = $(this).text()
@@ -54,29 +54,29 @@ function updateSongList() {
         url: queryLyrics,
         method: "GET"
     }).then(function(response) {
-            $("#songButtons").text("");
-            var lyricsHeader = $("<h5>").text("Lyrics Options: ")
-            $("#songButtons").append(lyricsHeader);
+        $("#songButtons").text("");
+        var lyricsHeader = $("<h5>").text("Lyrics Options: ")
+        $("#songButtons").append(lyricsHeader);
 
-            for (i = 0; i < response.length; i++) {
-                buttonDIV = $("<div>").attr("class", "happiButtons");
-                buttonDIV.attr("id", `test${i}`);
-                titleDiv = $("<div>").text("Title: " + response.result[i].track);
-                artistDiv = $("<div>").text("Artist: " + response.result[i].artist);
-                lyrics = response.result[i].api_lyrics + "?&apikey=05580c9wJXOa2YrFZUJlxtMDKREEexMldmTAHlmwb7Uk62acRmtbkJIv";
-                buttonDIV.val(lyrics);
-                $(buttonDIV).append(titleDiv);
-                $(buttonDIV).append(artistDiv);
-                $("#songButtons").append(buttonDIV);
+        for (i = 0; i < response.length; i++) {
+            buttonDIV = $("<div>").attr("class", "happiButtons");
+            buttonDIV.attr("id", `test${i}`);
+            titleDiv = $("<div>").text("Title: " + response.result[i].track);
+            artistDiv = $("<div>").text("Artist: " + response.result[i].artist);
+            lyrics = response.result[i].api_lyrics + "?&apikey=05580c9wJXOa2YrFZUJlxtMDKREEexMldmTAHlmwb7Uk62acRmtbkJIv";
+            buttonDIV.val(lyrics);
+            $(buttonDIV).append(titleDiv);
+            $(buttonDIV).append(artistDiv);
+            $("#songButtons").append(buttonDIV);
 
-                queryLYR = lyrics;               
-            }
+            queryLYR = lyrics;               
+        }
 
-            for (i = 0; i < response.length; i++) {
-                tippy(`#test${i}`, {
-                    content: "Click me to see if I have lyrics!"
-                });
-            }
+        for (i = 0; i < response.length; i++) {
+            tippy(`#test${i}`, {
+                content: "Click me to see if I have lyrics!"
+            });
+        }
     })
 
         var queryTabs = "https://www.songsterr.com/a/ra/songs.json?pattern=" + replaceSpace;

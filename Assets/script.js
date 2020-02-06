@@ -39,7 +39,6 @@ $("#search").click(function updateSongList() {
     ul.append(li);
     $("#searchedList").append(ul);
 
-
     replaceSpace = currentSong.replace(/\s/g, "%20"); 
     queryLyrics = "https://api.happi.dev/v1/music?q=" + replaceSpace + "&limit=&apikey=05580c9wJXOa2YrFZUJlxtMDKREEexMldmTAHlmwb7Uk62acRmtbkJIv&type="
 
@@ -53,6 +52,7 @@ $("#search").click(function updateSongList() {
 
             for (i = 0; i < response.length; i++) {
                 buttonDIV = $("<div>").attr("class", "happiButtons");
+                buttonDIV.attr("id", `test${i}`);
                 titleDiv = $("<div>").text("Title: " + response.result[i].track);
                 artistDiv = $("<div>").text("Artist: " + response.result[i].artist);
                 lyrics = response.result[i].api_lyrics + "?&apikey=05580c9wJXOa2YrFZUJlxtMDKREEexMldmTAHlmwb7Uk62acRmtbkJIv";
@@ -60,8 +60,14 @@ $("#search").click(function updateSongList() {
                 $(buttonDIV).append(titleDiv);
                 $(buttonDIV).append(artistDiv);
                 $("#songButtons").append(buttonDIV);
-          
-                queryLYR = lyrics;                
+
+                queryLYR = lyrics;               
+            }
+
+            for (i = 0; i < response.length; i++) {
+                tippy(`#test${i}`, {
+                    content: "Click me to see if I have lyrics!"
+                });
             }
     })
 
@@ -103,26 +109,11 @@ function lyricsClick() {
         if (response.success === true) {
             $(".showLyricsDiv").text("");
             var showLyrics = response.result.lyrics;
+            console.log(showLyrics) // shows lyrics how I want them to appear, but won't append that same way
             $(".showLyricsDiv").append(showLyrics);
-        } else {
-            var btn = document.getElementById("myBtn");
-            var span = document.getElementsByClassName("close")[0];
-            btn.onclick = function() {
-                modal.style.display = "block";
-            }
-            span.onclick = function () {
-                modal.style.display = "none";
-            }
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-            alert("Sorry, there are no lyrics on file for that option.")
-        }
+        } 
     })
 }
-
 
 // get lyrics and tabs from list history
 $(".listnone").click(function updateSongList() {
@@ -148,6 +139,7 @@ $(".listnone").click(function updateSongList() {
 
             for (i = 0; i < response.length; i++) {
                 buttonDIV = $("<div>").attr("class", "happiButtons");
+                buttonDIV.attr("id", `test${i}`);
                 titleDiv = $("<div>").text("Title: " + response.result[i].track);
                 artistDiv = $("<div>").text("Artist: " + response.result[i].artist);
                 lyrics = response.result[i].api_lyrics + "?&apikey=05580c9wJXOa2YrFZUJlxtMDKREEexMldmTAHlmwb7Uk62acRmtbkJIv";
@@ -157,6 +149,12 @@ $(".listnone").click(function updateSongList() {
                 $("#songButtons").append(buttonDIV);
 
                 queryLYR = lyrics;  
+                console.log(queryLYR)
+            }
+            for (i = 0; i < response.length; i++) {
+                tippy(`#test${i}`, {
+                    content: "Click me to see if I have lyrics!"
+                });
             }
     })
 
@@ -178,14 +176,12 @@ $(".listnone").click(function updateSongList() {
                     var str = "Click me for tab info!";
                     var result = str.link(queryURL); 
 
-
                     $(tabButtons).append(titleDiv);
                     $(tabButtons).append(artistDiv);
                     $(tabButtons).append(result);
                     $("#tabList").append(tabButtons);
                 }
             })
-
     $("#songButtons").prepend(ul);
     localStorage.getItem("songArr", songArr);
 })

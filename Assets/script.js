@@ -29,6 +29,9 @@ if (retrievedData !=null) {
 }
 
 function currentSongSearch() {
+    $('html,body').animate({
+        scrollTop: $(".second").offset().top},
+        'slow');
     currentSong = $("#input").val();
     songArr.push(currentSong);
     localStorage.setItem("songArr", JSON.stringify(songArr));

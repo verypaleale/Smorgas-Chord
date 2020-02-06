@@ -64,12 +64,12 @@ body {
 #tabsField {
     /* background-color: #ffe1d0; */
     background-color: transparent;
-    color:#ffb347;
+    color:#fbeee4;
     border-radius: 5px;
     border-width: 1px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
     border: 2px solid;
-    border-color:#ffb347;
+    border-color:#fbeee4;
     font-size: 18px;
     font-weight: 700;
     text-align: center;
@@ -132,6 +132,12 @@ body {
     text-align: center;
     padding: 20px;
     margin: 20px;
+}
+
+#yeezy {
+    color: rgb(169, 169, 238);
+    border-color: rgb(193, 193, 248);
+    background-color: rgba(30, 52, 142, 0.5);
 }
 
 

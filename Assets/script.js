@@ -10,7 +10,7 @@ var replaceSpace;
 var showLyrics1;
 
 $(document).on("click", ".happiButtons", lyricsClick);
-$(document).on("click", "#YEEZY", kanyeTalks);
+$(document).on("click", "#yeezy", kanyeTalks);
 
 var retrievedData = localStorage.getItem("songArr");
 if (retrievedData !=null) {

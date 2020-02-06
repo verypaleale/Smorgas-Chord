@@ -25,5 +25,4 @@ https://verypaleale.github.io/Project1/
 
 ## Images
 
-![Image of Smorgas-chord]
-(./images/Readme-Screenshot.png)
+![Image of Smorgas-chord](./images/Readme-Screenshot.png)

@@ -61,7 +61,7 @@ $("#search").click(function updateSongList() {
                 $(buttonDIV).append(artistDiv);
                 $("#songButtons").append(buttonDIV);
 
-                queryLYR = lyrics;                
+                queryLYR = lyrics;               
             }
 
             for (i = 0; i < response.length; i++) {

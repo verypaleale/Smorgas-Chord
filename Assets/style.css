@@ -44,12 +44,12 @@ body {
 #lyricsField {
     /* background-color: #dcf3d0; */
     background-color: transparent;
-    color: rgb(169, 169, 238);
+    color: #b5e9e9;
     border-radius: 5px;
     border-width: 1px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
     border: 2px solid;
-    border-color: rgb(193, 193, 248);
+    border-color: #b5e9e9;
     font-size: 18px;
     font-weight: 700;
     text-align: center;
@@ -59,12 +59,12 @@ body {
 #tabsField {
     /* background-color: #ffe1d0; */
     background-color: transparent;
-    color: rgb(169, 169, 238);
+    color: #ffe1d0;
     border-radius: 5px;
     border-width: 1px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
     border: 2px solid;
-    border-color: rgb(193, 193, 248);
+    border-color: #ffe1d0;
     font-size: 18px;
     font-weight: 700;
     text-align: center;
@@ -126,19 +126,17 @@ body {
 
 
 .songsterButtons {
-    background-color: transparent;
-    color: slategrey;
+    color: #3eb9b9;
     border-radius: 5px;
     border-width: 1px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-    border: 2px solid slategray;
+    border: 2px solid #b5e9e9;
     font-size: 18px;
-    padding: 10px;
     margin-bottom: 5px;
+    background-color: #ffe1d0;
 
 }
 .happiButtons {
-    background-color: transparent;
     color: rgb(144, 117, 112);
     border-radius: 5px;
     border-width: 1px;
@@ -148,6 +146,7 @@ body {
     padding: 5px;
     margin-bottom: 5px;
     margin: 1px;
+    background-color: #b5e9e9;
 
 }
 #subtitle {

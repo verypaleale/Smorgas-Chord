@@ -4,6 +4,9 @@ This application will allow the user to search lyrics and guitar tabs for popula
 ## Deployment Link
 https://verypaleale.github.io/Project1/
 
+## Presentation Link
+https://docs.google.com/presentation/d/1cVyrK_oaOK7zZ1CL3QATpxgZn8lupxuR8YKMJ8OJZSA/edit?usp=sharing
+
 ## Included Files
 * index.html
 * results.html

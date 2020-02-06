@@ -13,67 +13,26 @@
 
 </head>
 <body>
+  
 
   <!-- Added link to the jQuery Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <div class="first">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-            </a>
-        
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
-          </div>
-        
-          <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-              <a class="navbar-item">
-                Home
-              </a>
-        
-              <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                  How are we rockin'?
-                </a>
-        
-                <div class="navbar-dropdown">
-                  <a class="navbar-item">
-                    About
-                  </a>
-                  <a class="navbar-item">
-                    Contact
-                  </a>
-                  <hr class="navbar-divider">
-                  <a class="navbar-item">
-                    Report an issue
-                  </a>
-                </div>
-              </div>
-            </div>
-        
-            <div class="navbar-end">
-              <div class="navbar-item">
-                  <button class="button is-medium">
-                      <span class="icon is-medium">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>GitHub</span>
-                    </button>
-              </div>
-            </div>
-          </div>
-      </nav>
+      <div id="container">
+        <video  autoplay muted loop id="myVideo" onclick="myFunction()">
+         <source src="images/video.mp4" type="video/mp4" >
+       </video>
+      
+
 
   <!-- Input Container-->
 
       <div id="main" class="container">
-          <div class="container is-centered">
+
+        <div id="container">
+
+            
               <div class="box">
                   <div class="columns">
                     <div class="column"></div>
@@ -96,15 +55,16 @@
                       </div>
                       <div class="column"></div>
                     </div>
-
+                    
                   </div>
-
                   
               </div>
+              
           </div>
+
       </div>
-    </div>
     
+
     <div class="second">
       <div class="tile is-ancestor">
         <div class="tile is-parent is-9">
@@ -122,15 +82,15 @@
                 <div class="row showLyricsDiv"> </div> 
             </article>
             <article id="tabsField" class="tile is-child notification">
-                <p class="title">Chords go Here??</p>
+                <p class="title">Choose your Chords!</p>
                 <div id="tabList" class="tabList"></div>
                 
-
             </article>
         </div>
-        <div class="tile is-parent is-3">
-            <article id="historyField" class="tile is-child notification">
-            <div  class="content">
+        <div class="tile is-vertical is-3">
+          <div class="tile is-parent">
+            <article id="historyField" class="tile is-child notification box">
+              <div  class="content">
                 <p class="title">History</p>
                 <div id="searchedList">Previous Songs You Searched For:</div>
                 <div id="songList"></div>
@@ -138,41 +98,32 @@
                 <div class = "row showTabsDiv"></div>
                 <!-- Songs -->
                 </div>
-            </div>
+              </div>
             </article>
+            <article id="yeezyField" class="tile is-child notification box">
+              <div class="content">
+                <p class="title">Yeezy Quote Magic:</p>
+              </div>
+            </article>
+          </div>
         </div>
+      </div>
     </div>
- <!-- <div class=" tile is-ancestor">
-     <div class="tile is-parent is-12">
-         <article class="tile is-child notification is-warning">
-             <div class="content">
-                 <p class="yeezy-quote">
-                     <button class="YEEZY">
-                         Press me for a fire yeezy quote
-                     </button>
-                 </p>
-             </div>
-             
-         </article>
-     </div>
- </div>  -->
 
- <!-- <button id="button" aria-describedby="tooltip">My button</button>
-    <div id="tooltip" role="tooltip">My tooltip</div>
-
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="Assets/script.js"></script>
     <script>
-      const button = document.querySelector('#button');
-      const tooltip = document.querySelector('#tooltip');
+       var video = document.getElementById("myVideo")
 
-      Popper.createPopper(button, tooltip);
-      </script> -->
-
-      <script src="https://unpkg.com/popper.js@1"></script>
-      <script src="https://unpkg.com/tippy.js@5"></script>
-      
-  <script src="Assets/script.js"></script>
-    
+      function myFunction() { 
+        if (video.paused) {
+          video.play();
+  
+        } else {
+          video.pause();
+  
+    }
+}
+    </script>
     
 
 </body>

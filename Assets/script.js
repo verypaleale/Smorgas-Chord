@@ -41,16 +41,13 @@ function currentSongSearch() {
 } 
 function currentSongListnone() {
     currentSong = $(this).text()
-    console.log(currentSong)
     updateSongList(currentSong);
 }
 
-// get lyrics and tabs from  search button
 function updateSongList() {
     $(".showLyricsDiv").text("");
 
     replaceSpace = currentSong.replace(/\s/g, "%20"); 
-    console.log("replace: "+ replaceSpace)
     queryLyrics = "https://api.happi.dev/v1/music?q=" + replaceSpace + "&limit=&apikey=05580c9wJXOa2YrFZUJlxtMDKREEexMldmTAHlmwb7Uk62acRmtbkJIv&type="
 
     $.ajax({
@@ -83,7 +80,7 @@ function updateSongList() {
     })
 
         var queryTabs = "https://www.songsterr.com/a/ra/songs.json?pattern=" + replaceSpace;
-        console.log("queryTabs: " + queryTabs)
+
         $.ajax({
             url: queryTabs,
             method: "GET"
